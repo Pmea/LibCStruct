@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/pierremahe/Documents/Programation/Projet-Structure/listS/listS.c
+listS.h
+/Users/pierremahe/Documents/Programation/Projet-Structure/listS/listS.h
+
+/Users/pierremahe/Documents/Programation/Projet-Structure/listS/listS.h
+stdio.h
+-
+stdlib.h
+-
+stdbool.h
+-
+string.h
+-
+assert.h
+-
+
