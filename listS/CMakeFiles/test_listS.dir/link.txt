@@ -1,1 +1,0 @@
-/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names -pg CMakeFiles/test_listS.dir/test_listS.c.o CMakeFiles/test_listS.dir/listS.c.o  -o test_listS  -lm 

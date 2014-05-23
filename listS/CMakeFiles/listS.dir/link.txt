@@ -1,2 +1,0 @@
-/usr/bin/ar cr liblistS.a  CMakeFiles/listS.dir/listS.c.o
-/usr/bin/ranlib liblistS.a
