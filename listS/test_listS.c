@@ -8,7 +8,7 @@ int main(int argc, char* argv[]){
 	printf("TEST: creation de liste\n");
 	listS l= creat_listS();
 
-	printf("TEST: ajouter elementliste\n");
+	printf("TEST: ajout element liste\n");
 	for(int i=0; i<10; i++){
 		add_item_listS(l, i);
 	}

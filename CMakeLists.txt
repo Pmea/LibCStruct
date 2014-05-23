@@ -1,4 +1,4 @@
-cmake_minimum_required( VERSION 2.6 )
+ cmake_minimum_required( VERSION 2.6 )
 
 project( structure )
 
@@ -10,3 +10,4 @@ SET(CMAKE_EXE_LINKER_FLAGS -pg)
 include_directories( includes )
 
 add_subdirectory( listS )
+add_subdirectory( stack )
