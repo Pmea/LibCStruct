@@ -10,4 +10,6 @@ SET(CMAKE_EXE_LINKER_FLAGS -pg)
 include_directories( includes )
 
 add_subdirectory( listS )
+add_subdirectory( listD )
 add_subdirectory( stack )
+add_subdirectory( queue )
