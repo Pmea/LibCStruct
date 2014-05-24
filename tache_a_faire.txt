@@ -1,0 +1,19 @@
+Tache a effectuer:
+
+
+@Pierre:
+- modifier nom pour de certaines fonctions de ListD 
+- re-ecriture de la doc (norme doxygen) pour les modules:
+	- listS
+	- listD
+	- stack
+
+
+@all:
+-implementation:
+	- arbres binaire
+	- arbres de recherche
+	- arbres planaire
+	- AVL
+	- tas
+	- 2-3 arbre
