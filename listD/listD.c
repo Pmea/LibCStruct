@@ -1,4 +1,4 @@
-/* Liste Doublement Chainé */
+/* Liste Doublement Chainee */
 
 /* V0.1 - 23/05/14 */
 
@@ -194,7 +194,7 @@ void print_listD(listD l){
 		printf("prec %14p curs %14p last %14p\n", l->curs->prec, l->curs, l->curs->next);
 		move_next_listD(l);
 	}
-	printf("%d,", get_item_listD(l));
+	printf("%d, ", get_item_listD(l));
 	printf("prec %14p curs %14p last %14p\n", l->curs->prec, l->curs, l->curs->next);
 
 }
