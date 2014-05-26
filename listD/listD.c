@@ -1,9 +1,10 @@
-/* Liste Doublement Chainee */
-
-/* V0.1 - 23/05/14 */
+/**
+* \file listD.c
+* \brief Implementation du type liste doublement chainée
+*/
+/* V0.2 - 23/05/14 */
 
 #include "listD.h"
-
 
 struct cell_t{
 	int value;
@@ -194,7 +195,7 @@ void print_listD(listD l){
 		printf("prec %14p curs %14p last %14p\n", l->curs->prec, l->curs, l->curs->next);
 		move_next_listD(l);
 	}
-	printf("%d, ", get_item_listD(l));
+	printf("%d,", get_item_listD(l));
 	printf("prec %14p curs %14p last %14p\n", l->curs->prec, l->curs, l->curs->next);
 
 }

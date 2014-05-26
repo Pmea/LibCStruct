@@ -55,8 +55,10 @@ void pop_queue(queue q);
 */ 
 int get_item_queue(queue q);
 
-/* Debbug */
 
+/** \fn print_queue
+*   \brief Debbug 
+*/
 void print_queue(queue q);
 
 #endif /* QUEUE_H_ */

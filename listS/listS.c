@@ -1,6 +1,8 @@
-/* Liste Simplement Chaine */
-
-/* V0.1 - 22/05/14 */
+/**
+* \file listS.c
+* \brief Implementation de la liste simplement chainee
+*/
+/* V0.2 - 22/05/14 */
 
 #include "listS.h"
 
@@ -84,7 +86,7 @@ void destroy_listS(listS l){
 }
 
 // retourne la valeur de l'element courrant et si la liste vide -1 (autre valeur) ou assert ?
-int get_current_item_listS(listS l){
+int get_item_listS(listS l){
 	if(!empty_listS(l))
 		return l->curs->item;
 	assert(0);
@@ -148,7 +150,7 @@ void remove_value_listS(listS l, int value){
 	cell saveC;
 
 	//si l'item a supprimer est le premier
-	if(get_current_item_listS(l) == value){
+	if(get_item_listS(l) == value){
 		l->first = l->first->next;
 		destroy_cell(l->curs);
 		to_begin_listS(l);
@@ -158,7 +160,7 @@ void remove_value_listS(listS l, int value){
 	move_next_listS(l);
 
 	while(!end_listS(l)){
-		if(get_current_item_listS(l) == value){
+		if(get_item_listS(l) == value){
 			saveC->next= l->curs->next;
 			destroy_cell(l->curs);
 			l->curs= saveC;
@@ -167,7 +169,7 @@ void remove_value_listS(listS l, int value){
 		move_next_listS(l);
 	}
 
-	if(get_current_item_listS(l) == value){
+	if(get_item_listS(l) == value){
 		saveC->next= l->curs->next;
 		destroy_cell(l->curs);
 		l->curs= saveC;
@@ -181,7 +183,7 @@ void remove_value_listS(listS l, int value){
 void print_listS(listS l){
 	to_begin_listS(l);
 	while(! end_listS(l)){
-		printf("%d, ", get_current_item_listS(l));
+		printf("%d, ", get_item_listS(l));
 		move_next_listS(l);
 	}
 	printf("\n");

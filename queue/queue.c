@@ -1,4 +1,7 @@
-/* file */
+/**
+* \file queue.c
+* \briel Implementation du Module file
+*/
 
 /* V0.1 - 24/05/14 */
 
@@ -36,10 +39,6 @@ int get_item_queue(queue q){
 	move_end_listD(q->list);
 	return get_item_listD(q->list);
 }
-
-
-/* Debbug */
-
 
 void print_queue(queue q){
 	print_listD(q->list);
