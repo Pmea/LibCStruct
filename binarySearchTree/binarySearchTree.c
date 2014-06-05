@@ -15,25 +15,12 @@ struct binarySearchTree_t{
 	binaryTree tree ;
 };
 
-/**
- * \fn binarySearchTree create_BST(int value)
- * \brief create a binary search tree with one node.
- *
- * \param value the value contained by the node.
- * \return a binary search tree.
-*/
 binarySearchTree create_BST(int value){
 	binarySearchTree bst = (binarySearchTree) malloc(sizeof(struct binarySearchTree_t)) ;
 	bst->tree = create_BT(value) ;
 	return bst ;
 }
 
-/**
- * \fn void destroy_BST(binarySearchTree bst)
- * \brief destroy a binary search tree.
- *
- * \param bst the binary search tree to destroy.
-*/
 void destroy_BST(binarySearchTree bst) {
 	destroy_BT(bst->tree) ;
 	free(bst) ;
@@ -54,12 +41,6 @@ void insert(binaryTree bt, int value) {
 	}
 }
 
-/**
- * \fn void insertValue_BST(int value)
- * \brief insert a value in the binary search tree.
- * \param bst the binary search tree to work with.
- * \param value the value to insert in the binary search tree.
-*/
 void insertValue_BST(binarySearchTree bst, int value) {
 	assert(bst != NULL) ;
 	insert(bst->tree, value) ;
@@ -96,12 +77,6 @@ void delete(binaryTree bt, int value) {
 		delete(rightSon, value) ;
 }
 
-/**
- * \fn void deleteValue_BST(binarySearchTree bst, int value) 
- * \brief delete the first occurence of a value in the binary search tree.
- * \param bst the binary search tree to work with.
- * \param value the value to delete in the binary search tree.
-*/
 void deleteValue_BST(binarySearchTree bst, int value) {
 	delete(bst->tree, value) ;
 }
