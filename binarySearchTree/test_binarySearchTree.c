@@ -13,13 +13,16 @@ int main() {
 
 	deleteValue_BST(bst,20) ;
 	for(int i = 0 ; i <= 100 ; i+=10) {
+		binarySearchTree tmp = findValue_BST(bst,i) ;
 		if(i == 20) {
-			if(findValue_BST(bst,i) != NULL)
+			if(tmp != NULL)
 				printf("Error %d\n",i);
-		} else {
-		if(findValue_BST(bst,i) == NULL)
+		} 
+		else if(tmp == NULL) {
 			printf("Error %d\n",i) ;
 		}
+		if(tmp != NULL)
+			free(tmp) ;
 	}
 
 	destroy_BST(bst) ;
