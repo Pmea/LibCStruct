@@ -4,7 +4,7 @@
  * \author Pierre Mahé, Jérémy Turon
  *
  */
-
+#include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
 
@@ -46,9 +46,9 @@ void insertValue_BST(binarySearchTree bst, int value) {
 	insert(bst->tree, value) ;
 }
 
-void delete(binaryTree bt, int value) {
+binaryTree delete(binaryTree bt, int value) {
 	if(bt == NULL)
-		return ;
+		return NULL;
 
 	int btValue = getValue_BT(bt) ;
 	binaryTree leftSon = getLeftSon_BT(bt) ;
@@ -68,17 +68,19 @@ void delete(binaryTree bt, int value) {
  		else {
  			int newValue = getValue_BT(rightSon) ;
  			setValue_BT(bt,newValue) ;
- 			delete(rightSon, newValue) ;
+ 			setRightSon_BT(bt,delete(rightSon, newValue)) ;
  		}
 	}
 	else if(btValue < value)
-		delete(leftSon, value) ;
+		setLeftSon_BT(bt,delete(leftSon, value)) ;
 	else 
-		delete(rightSon, value) ;
+		setRightSon_BT(bt,delete(rightSon, value)) ;
+
+	return bt ;
 }
 
 void deleteValue_BST(binarySearchTree bst, int value) {
-	delete(bst->tree, value) ;
+	bst->tree = delete(bst->tree, value) ;
 }
 
 binarySearchTree findValue_BST(binarySearchTree bst, int value) {
@@ -95,8 +97,9 @@ binarySearchTree findValue_BST(binarySearchTree bst, int value) {
 			tmp = getRightSon_BT(tmp) ;
 	}
 
-	if(bt == NULL)
+	if(bt == NULL) {
 		return NULL ;
+	}
 
 	binarySearchTree res = (binarySearchTree) malloc(sizeof(struct binarySearchTree_t)) ;
 	res->tree = bt ;
